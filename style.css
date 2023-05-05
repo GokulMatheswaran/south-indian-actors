@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 320px;
+}
+
+.portfolio h2 {
+  
+  flex-basis: 100%;
+  text-align: center;
+  margin: 50px auto 30px;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #111;
+  font-size: 40px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+}
+.card {
+  width: 25%;
+  overflow: hidden;
+  position: relative;
+  padding: 30px;
+  margin-left: 40px;
+}
+.card .content {
+  z-index: 1;
+  width: 100%;
+  /* height: 50%; */
+  position: absolute;
+  bottom: -100px;
+  transition: all 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100px;
+  background: #111;
+}
+
+.card .image {
+  z-index: 1;
+  height: 100%;
+  /* padding-bottom: 50px; */
+}
+.card img {
+  height: 432px;
+  width: 100%;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+
+.card:hover .content {
+  bottom: 50px;
+} 
+
+.card:hover .image img {
+  transform: scale(2);
+}
+
+.card .content span:first-child {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+
+.card .content span:last-child {
+  font-size: 14px;
+  color: #18cfab;
+  text-align: center;
+  font-weight: 700;
+}
+
+
+/* @media screen and (max-width: 768px) {
+  .card {
+  width: 50%;
+  }
+  .card .content {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+  width: 100%;
+  }
+} */
